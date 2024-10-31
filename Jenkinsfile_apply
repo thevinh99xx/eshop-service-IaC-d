@@ -74,14 +74,14 @@ pipeline {
                     }
                 }
             }
-            // post {
-            //     success { 
-            //         slackSend(channel: '<< CHANNEL ID >>', color: 'good', message: 'service IaC Pipeline apply Success')
-            //     }
-            //     failure {
-            //         slackSend(channel: '<< CHANNEL ID >>', color: 'danger', message: 'service IaC Pipeline apply fail')
-            //     }
-            // }
+             post {
+                 success { 
+                     slackSend(channel: 'C07RNC9DDBN', color: 'good', message: 'service IaC Pipeline apply Success')
+                 }
+                 failure {
+                     slackSend(channel: 'C07RNC9DDBN', color: 'danger', message: 'service IaC Pipeline apply fail')
+                 }
+             }
         }
     }
 }
